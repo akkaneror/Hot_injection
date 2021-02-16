@@ -3,3 +3,6 @@ This repo is used for the project of preducting outcomes of the CdSe quantum dot
 Data is extracted and edited from J. Phys. Chem. C 2020, 124, 44, 24298–24305 
 
 Test!!!! Hello everyone!
+
+
+Added from branch 2/16 3:33 PM
