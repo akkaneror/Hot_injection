@@ -25,17 +25,17 @@ Components Specification:
 
 1. User Interface
 
-	- Name: QuantumDotSizePredictor.py
-	- Function: Receives input from user for desired experimental conditions of a hot injection synthesis, and outputs the predicted CdSe quantum dot size
-	- Inputs: Growth Temperature, Metal Source, Metal Amount (mmol), Selenium Powder amount (mmol), Growth Time
-	- Outputs: Expected diameter of CdSe quantum dot
-	- Interaction with other components: Works with the machine learning algorithm that can best predict output 
+	- Name: QuantumDotPropPredictor.py
+	- Function: Receives input from user for desired experimental conditions of a hot injection synthesis, and outputs the predicted CdSe quantum dot size, absorbance and emission
+	- Inputs: Metal Source, Metal Amount (mmol), Selenium Powder amount (mmol), Solvent, Ligand, Growth Time, Growth Temperature
+	- Outputs: Diameter, absorbance (nm), emission (nm)
+	- Interaction with other components: Use machine learning model that best predicts outputs 
 
 	- Name: ExperimentalConditionPredictor.py
-	- Function: Receives input from user for desired CdSe quantum dot size, and outputs an appropriate set of experimental conditions for a hot injection synthesis
-	- Inputs: Desired diameter of CdSe quantum dot
-	- Outputs: Suggested growth temperature, metal source, metal ammount (mmol), Selenium Powder amount (mmol), Growth Time
-	- Interaction with other components: The initial dataset and the machine learning algorithms
+	- Function: Receives input from user for desired combination of CdSe quantum dot size, absorbance, emission and outputs an appropriate set of experimental conditions for a hot injection synthesis
+	- Inputs: Diameter (nm), absorbance (nm), emission (nm)
+	- Outputs: Suggested growth temperature, time, metal source, metal ammount (mmol), Selenium Powder amount (mmol), solvent, ligand
+	- Interaction with other components: Machine learning model that best predicts outputs. Subset of initial dataset that includes absorbance and emission data.
 
 2. Machine learning algorithms
 	
@@ -45,7 +45,7 @@ Components Specification:
 	- Outputs: The respective predicted CdSe quantum dot size of each machine learning model
 	- Interaction with other components: Returns value to the QuantumDotSizePredictor.py
 
-3. Statistic Information
+3. Statistical information (identifying trends)
 
 	-Name: 
 
