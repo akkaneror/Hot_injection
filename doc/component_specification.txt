@@ -1,3 +1,6 @@
+Use Cases:
+1. Alex is a chemistry undergrad student, and he needs to synthesize CdSe quantum dots for his grad student mentor. His mentor requests that the material absorbs and emits in the range 570-580 nm and leaves the rest up to Alex. However, Alex is new to this field and is overwhelmed by all the literature, some of which are contradicting. Alex doesn't know which procedure to follow and doesn't have time to read all of the papers. Alex is confused.
+
 Components Specification:
 
 1. User Interface
