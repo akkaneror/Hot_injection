@@ -25,28 +25,32 @@ Components Specification:
 
 1. User Interface
 
-	- Name: QuantumDotPropPredictor.py
-	- Function: Receives input from user for desired experimental conditions of a hot injection synthesis, and outputs the predicted CdSe quantum dot size, absorbance and emission
-	- Inputs: Metal Source, Metal Amount (mmol), Selenium Powder amount (mmol), Solvent, Ligand, Growth Time, Growth Temperature
-	- Outputs: Diameter, absorbance (nm), emission (nm)
-	- Interaction with other components: Use machine learning model that best predicts outputs 
-
 	- Name: ExperimentalConditionPredictor.py
 	- Function: Receives input from user for desired combination of CdSe quantum dot size, absorbance, emission and outputs an appropriate set of experimental conditions for a hot injection synthesis
 	- Inputs: Diameter (nm), absorbance (nm), emission (nm)
 	- Outputs: Suggested growth temperature, time, metal source, metal ammount (mmol), Selenium Powder amount (mmol), solvent, ligand
 	- Interaction with other components: Machine learning model that best predicts outputs. Subset of initial dataset that includes absorbance and emission data.
 
+	- Name: QuantumDotPropPredictor.py
+	- Function: Receives input from user for desired experimental conditions of a hot injection synthesis, and outputs the predicted CdSe quantum dot size, absorbance and emission
+	- Inputs: Metal Source, Metal Amount (mmol), Selenium Powder amount (mmol), Solvent, Ligand, Growth Time, Growth Temperature
+	- Outputs: Diameter, absorbance (nm), emission (nm)
+	- Interaction with other components: Use machine learning model that best predicts outputs 
+
+	-.exe takes .py and converts to user interface
+
 2. Machine learning algorithms
 	
-	- Name: Each model is labelled accordingly in each submodule
-	- Function: Receives input from the QuantumDotSizePredictor.py
-	- Inputs: The appropriate input from the "QuantumDotSizePredictor.py" file
-	- Outputs: The respective predicted CdSe quantum dot size of each machine learning model
-	- Interaction with other components: Returns value to the QuantumDotSizePredictor.py
+	- Name:
+	- Function: 
+	- Inputs: Tuple of conditions in numerical form eg. (metal, solvent, ligand, time, temp)
+	- Outputs: 
+	- Interaction with other components:
+	- Linear regression, multilinear regression, smoothing spines, regression trees, random forrests, deep learning, bootstrapping
+	- The best predictive model will be used for QuantumDotPropPredictor.py and ExperimentalConditionPredictor.py
 
-3. Statistical information (identifying trends)
+3. Statistical information
 
-	-Name: 
-
+	-Name: StatLab.py
+	-Function: Identify trends between different experimental conditions and quantum dot properties
 
