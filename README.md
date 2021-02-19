@@ -6,5 +6,9 @@ This is the excise, I made a new branch from my terminal
 =======
 Test!!!! Hello everyone!
 
+<<<<<<< HEAD
 
 Added something 2/16/2020
+=======
+Test branch test branch
+>>>>>>> Florence
