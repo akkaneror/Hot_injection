@@ -7,7 +7,7 @@ follow and doesn't have time to read all of the papers. He can guess and modify 
 but he cannot find one that suits his exact needs. Alex is confused.
 
 2. Clay is a chemistry grad student who has some experience with the synthesis of nanoparticles. 
-He has already asked his undergrad Alex to help him synthesize one batch of CdSe quantum dots. 
+He has already asked his undergrad to help him synthesize one batch of CdSe quantum dots. 
 Clay needs to run a dozen more experiments modifying the conditions of the synthesis. He wants
 to adjust the temperature and the solvents of the reaction to see if the size, absorbance and 
 emission are different.This specific set of experiments has never been reported before. But Clay 
@@ -18,7 +18,7 @@ his PI will be mad if he doesn't have the data. Clay is frustrated.
 studying synthesis and properties of colloidal nanocrystals. He knows that, despite the substantial
 improvement over the past decades, synthesising quantum dots is still too Edisonian (trial and 
 error). Zach thinks that if he knew all of the existing literature, he could identify patterns and
-correlations and start to synthesise quantum dots even more intenionally, systematically, and 
+correlations and start to synthesise new quantum dots even more intenionally, systematically, and 
 efficiently. Zach is curious. 
 
 Components Specification:
