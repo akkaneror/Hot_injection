@@ -1,0 +1,29 @@
+Components Specification:
+
+1. User Interface
+
+	- Name: QuantumDotSizePredictor.py
+	- Function: Receives input from user for desired experimental conditions of a hot injection synthesis, and outputs the predicted CdSe quantum dot size
+	- Inputs: Growth Temperature, Metal Source, Metal Amount (mmol), Selenium Powder amount (mmol), Growth Time
+	- Outputs: Expected diameter of CdSe quantum dot
+	- Interaction with other components: Works with the machine learning algorithm that can best predict output 
+
+	- Name: ExperimentalConditionPredictor.py
+	- Function: Receives input from user for desired CdSe quantum dot size, and outputs an appropriate set of experimental conditions for a hot injection synthesis
+	- Inputs: Desired diameter of CdSe quantum dot
+	- Outputs: Suggested growth temperature, metal source, metal ammount (mmol), Selenium Powder amount (mmol), Growth Time
+	- Interaction with other components: The initial dataset and the machine learning algorithms
+
+2. Machine learning algorithms
+	
+	- Name: Each model is labelled accordingly in each submodule
+	- Function: Receives input from the QuantumDotSizePredictor.py
+	- Inputs: The appropriate input from the "QuantumDotSizePredictor.py" file
+	- Outputs: The respective predicted CdSe quantum dot size of each machine learning model
+	- Interaction with other components: Returns value to the QuantumDotSizePredictor.py
+
+3. Statistic Information
+
+	-Name: 
+
+
