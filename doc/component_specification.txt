@@ -1,8 +1,25 @@
 Use Cases:
-1. Alex is a chemistry undergrad student, and he needs to synthesize CdSe quantum dots for his grad student mentor. 
-His mentor requests that the material absorb and emit in the range 570-580 nm and leaves the rest up to Alex. 
-However, Alex is new to this field and is overwhelmed by all the literature, some of which are contradicting. 
-Alex doesn't know which procedure to follow and doesn't have time to read all of the papers. Alex is confused.
+1. Alex is a chemistry undergrad student, and he needs to synthesize CdSe quantum dots for his 
+grad student mentor. His mentor specifically requests that the material absorb and emit between 
+570-580 nm and are around 3nm in size. However, Alex is new to this field and is overwhelmed 
+by all of the literature, some of which are contradicting. He doesn't know which procedure to 
+follow and doesn't have time to read all of the papers. He can guess and modify an existing prep, 
+but he cannot find one that suits his exact needs. Alex is confused.
+
+2. Clay is a chemistry grad student who has some experience with the synthesis of nanoparticles. 
+He has already asked his undergrad Alex to help him synthesize one batch of CdSe quantum dots. 
+Clay needs to run a dozen more experiments modifying the conditions of the synthesis. He wants
+to adjust the temperature and the solvents of the reaction to see if the size, absorbance and 
+emission are different.This specific set of experiments has never been reported before. But Clay 
+can only come to the lab twice a week due to COVID. Clay knows that in group meeting on Friday, 
+his PI will be mad if he doesn't have the data. Clay is frustrated.
+
+3. Zach is a demanding chemistry professor with a large group of grad students and undergrads 
+studying synthesis and properties of colloidal nanocrystals. He knows that, despite the substantial
+improvement over the past decades, synthesising quantum dots is still too Edisonian (trial and 
+error). Zach thinks that if he knew all of the existing literature, he could identify patterns and
+correlations and start to synthesise quantum dots even more intenionally, systematically, and 
+efficiently. Zach is curious. 
 
 Components Specification:
 
