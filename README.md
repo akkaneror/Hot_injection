@@ -1,14 +1,8 @@
-This repo is used for the project of preducting outcomes of the CdSe quantum dots hot injection syntheses 
+This is a class project for University of Washington CHEME 545/546 Winter 2021.
 
-Data is extracted and edited from J. Phys. Chem. C 2020, 124, 44, 24298–24305 
+The objective of this software is to predict size (nm), absorbance (nm), and emission (nm) outcomes
+of hot injection syntheses of CdSe quantum dots. 
 
-This is the excise, I made a new branch from my terminal
-=======
-Test!!!! Hello everyone!
+The raw database was obtained from jp0c05993_si_004.txt J. Phys. Chem. C 2020, 124, 44, 24298–24305 
 
-<<<<<<< HEAD
-
-Added something 2/16/2020
-=======
-Test branch test branch
->>>>>>> Florence
+Now explain breakdown of repo and how to use...
