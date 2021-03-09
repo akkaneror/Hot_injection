@@ -68,9 +68,6 @@ for i in range(len(SLIDER_QUESTIONS_LIST)):
         SLIDER_QUESTIONS_LIST[i], SLIDER_SELECTIONS[i][0], SLIDER_SELECTIONS[i][1], SLIDER_SELECTIONS[i][2], SLIDER_SELECTIONS[i][3]))
 
 
-st.text(f'radio_answers: {radio_answers}')
-st.text(f'slider_answers: {slider_answers}')
-
 user_input = [slider_answers[8], radio_answers[0], slider_answers[0], slider_answers[1], 
               radio_answers[1], slider_answers[2], radio_answers[2], slider_answers[3],
               radio_answers[3], slider_answers[4], radio_answers[4], slider_answers[5],
@@ -91,11 +88,9 @@ df = pd.read_csv('CdSe - BetterthanRaw.csv')
 df_input = df.drop(columns =['Injection Temp (Celsius)', 'Metal_amount (g)', 'Metal_concentration (mmol/g)', 'Chalcogen_amount (g)',
 'Chalcogen_concentration (mmol/g)', 'Metal/Se_ratio', 'CA_amount (g)', 'Cd/CA_ratio', 'Amines_amount (g)', 'Phosphines_amount (g)', 
 'Chalcogen/Ph_ratio','Total_amount (g)','Chalcogen_source','Diameter_nm', 'Absorbance max (nm)', 'PL max (nm)', 'Diameter from', 'Citation'], inplace = False, axis = 1) 
-df_output = df[['Diameter_nm', 'Absorbance max (nm)', 'PL max (nm)']]
 
 #Checks the column names, and ensures that they do not have any leading or trailing spaces
 df_input.columns = df_input.columns.str.strip()
-df_output.columns = df_output.columns.str.strip()
 
 #Converts the values in Growth Temperature Column into float types
 df_input['Growth Temp (Celsius)'] = df_input['Growth Temp (Celsius)'].astype(float)
@@ -103,6 +98,8 @@ df_input['Growth Temp (Celsius)'] = df_input['Growth Temp (Celsius)'].astype(flo
 #Initializes 2 lists to contain all of the numerical and categorical input columns
 input_num_cols = [col for col in df_input.columns if df[col].dtypes !='O']
 input_cat_cols = [col for col in df_input.columns if df[col].dtypes =='O']
+st.write(input_num_cols)
+st.write(input_cat_cols)
 
 ct = ColumnTransformer([
     ('step1', StandardScaler(), input_num_cols),
@@ -111,8 +108,10 @@ ct = ColumnTransformer([
 
 ct.fit_transform(df_input)
 X = ct.transform(user_df)
-st.write(X)
+
 
 loaded_ET_reg = joblib.load('ET_reg.joblib')
 predicted = loaded_ET_reg.predict(X)
-st.write(predicted)
+st.write('Predicted diameter is', predicted[0, 0], '.\n',
+         ' Predicted absorbance max is', predicted[0, 1], '.\n',
+         ' Predicted emission is', predicted[0, 2])
