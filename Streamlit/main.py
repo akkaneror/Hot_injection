@@ -45,7 +45,7 @@ SLIDER_SELECTIONS = [[0.1, 14.0, 0.15, 0.0001],
                      [0.0, 60.0, 10.0, 0.01],
                      [0.0, 60.0, 10.0, 0.01],
                      [45.0, 350.0, 200.0, 1.0],
-                     [0.5, 2160.0, 50.0, 0.5],]
+                     [0.5, 1440.0, 50.0, 0.5],]
 
 radio_answers = []
 slider_answers = []
@@ -68,10 +68,10 @@ for i in range(len(SLIDER_QUESTIONS_LIST)):
         SLIDER_QUESTIONS_LIST[i], SLIDER_SELECTIONS[i][0], SLIDER_SELECTIONS[i][1], SLIDER_SELECTIONS[i][2], SLIDER_SELECTIONS[i][3]))
 
 
-user_input = [slider_answers[8], radio_answers[0], slider_answers[0], slider_answers[1], 
+user_input = [slider_answers[7], radio_answers[0], slider_answers[0], slider_answers[1], 
               radio_answers[1], slider_answers[2], radio_answers[2], slider_answers[3],
               radio_answers[3], slider_answers[4], radio_answers[4], slider_answers[5],
-              radio_answers[5], slider_answers[6], slider_answers[7]
+              radio_answers[5], slider_answers[6], slider_answers[8]
               ]
 
 user_df = pd.DataFrame(np.array(user_input).reshape(1, -1), columns=['Growth Temp (Celsius)', 'Metal_source', 'Metal_mmol (mmol)',
@@ -98,8 +98,6 @@ df_input['Growth Temp (Celsius)'] = df_input['Growth Temp (Celsius)'].astype(flo
 #Initializes 2 lists to contain all of the numerical and categorical input columns
 input_num_cols = [col for col in df_input.columns if df[col].dtypes !='O']
 input_cat_cols = [col for col in df_input.columns if df[col].dtypes =='O']
-st.write(input_num_cols)
-st.write(input_cat_cols)
 
 ct = ColumnTransformer([
     ('step1', StandardScaler(), input_num_cols),
