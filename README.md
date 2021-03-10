@@ -64,7 +64,7 @@ Hot_injection
         |-documentation.txt
     |- LICENSE.txt
     |- README.md
-    |- .gitignore   `
+    |- .gitignore
     
 ## Getting started with the hotdots package 
 
