@@ -33,7 +33,7 @@ RADIO_SELECTIONS = [['cadmium stearate', 'cadmium oxide', 'dimethylcadmium',
                         'phenyl ether', 'trioctylphosphine oxide'],
                     ['None', 'phosphinic acid', 'trioctylphosphine oxide']
                     ]
-# Creating questions wwith slider
+# Creating questions with slider
 SLIDER_QUESTIONS_LIST = ['How much Cadmium do you plan to use? (mmol)',
                          'Selenium power is used; how much Selenium do you plan to use? (mmol)',
                          'How much carboxylic acid  do you plan to use? (mmol)',
