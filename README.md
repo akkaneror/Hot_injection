@@ -1,4 +1,4 @@
-# Hot Injection
+# Hot_Injection
 
 This is a class project for University of Washington CHEME 545/546 Winter 2021.
 
@@ -11,9 +11,9 @@ The purpose of this project is two-fold:
  
     
 
-## Organization - outlines the overall structure of the project
+## Organization 
 
-Hot_injection
+`Hot_injection
     |- doc
         |- component_specification.txt
         |- Initial Project Idea.pdf
@@ -64,10 +64,10 @@ Hot_injection
         |-documentation.txt
     |- LICENSE.txt
     |- README.md
-    |- .gitignore
+    |- .gitignore   
+`
     
-    
-## Getting Started with the hotdots package 
+## Getting started with the hotdots package 
 
 There are 2 primary submodules inside this hotdots package. Module 1, ML Model Analysis, outlines the various ML models that were investigated in this study. It also contains the ML model comparison with the **[paper](https://pubs.acs.org/doi/10.1021/acs.jpcc.0c05993)**. Module 2, Streamlit-User Interface, is the core module of this package that enables the prediction of 3 characteristics of CdSe quantum dots based on a particular set of experimental conditions. 
 
@@ -88,7 +88,7 @@ Windows Users: Windows preview, **[Ubuntu](https://towardsdatascience.com/settin
 
 Mac OS: Terminal
 
-#### Package Dependencies
+#### Package dependencies
 
 * bokeh
 * numpy
@@ -96,7 +96,7 @@ Mac OS: Terminal
 * sklearn
 * streamlit
 
-#### Installation of the Package and Accessing the User Interface
+#### Installation of the package and accessing the user interface
 
 1. Enter into your desired directory from your terminal
 2. Enter the command `git clone https://github.com/UW-DIRECT-2021-NANO/Hot_injection.git`
