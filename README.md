@@ -61,7 +61,7 @@ The purpose of this project is two-fold:
                 |- CdSe - BetterthanRaw.csv
                 |- ET_reg.joblib
                 |- main.py
-		|- test_main.py
+                |- test_main.py
             |-documentation.txt
         |- LICENSE.txt
         |- README.md
