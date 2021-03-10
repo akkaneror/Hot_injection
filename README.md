@@ -13,58 +13,58 @@ The purpose of this project is two-fold:
 
 ## Organization 
 
-Hot_injection
-    |- doc
-        |- component_specification.txt
-        |- Initial Project Idea.pdf
-        |- Technology Review.pdf
-        |- User Cases and Comp Spec Illustration.pdf
-    |- hotdots
-        |- ML Model Analysis
-            |-Datasets
+    Hot_injection
+        |- doc
+            |- component_specification.txt
+            |- Initial Project Idea.pdf
+            |- Technology Review.pdf
+            |- User Cases and Comp Spec Illustration.pdf
+        |- hotdots
+            |- ML Model Analysis
+                |-Datasets
+                    |- CdSe - BetterthanRaw.csv
+                    |- CdSe for Abs (S&E).csv
+                    |- CdSe for Diameter (S&E).csv
+                    |- CdSe for PL (S&E).csv
+                    |- CdSe scaled.csv
+                    |- augmented_data.csv
+                    |- documentation.txt
+                |-Notebooks
+                    |- Analysis
+                        |- Analysis Summary.csv
+                        |- Analysis_summary.ipynb
+                        |- Recreate figures test 2.ipynb
+                        |- Recreate figures test.ipynb
+                    |- Dataset cleaning
+                        |- Data Augmentation
+                            |- Augmenting Data.ipynb
+                            |- CdSe scaled.csv
+                            |- Optimization ML Models for Data Augmentation.ipynb
+                            |- abs_filler.csv
+                            |- augmented absorbance.csv
+                            |- augmented_data.csv
+                            |- pl_filler.csv
+                            |- random_forest_ab.joblib
+                            |- random_forest_pl.joblib
+                        |- Column Transformer.ipynb
+                    |- Machine Learning Models
+                        |- Decision Tree.ipynb
+                        |- Extra Trees.ipynb
+                        |- Gradient Boosting Machine.ipynb
+                        |- KNN.ipynb
+                        |- Multi-Output Models.ipynb
+                        |- Multilinear Regression.ipynb
+                        |- Random Forest.ipynb
+                        |- Ridge Regression.ipynb
+                        |- SVR (kernel='linear','rbf).ipynb
+            |-Streamlit-User Interface
                 |- CdSe - BetterthanRaw.csv
-                |- CdSe for Abs (S&E).csv
-                |- CdSe for Diameter (S&E).csv
-                |- CdSe for PL (S&E).csv
-                |- CdSe scaled.csv
-                |- augmented_data.csv
-                |- documentation.txt
-            |-Notebooks
-                |- Analysis
-                    |- Analysis Summary.csv
-                    |- Analysis_summary.ipynb
-                    |- Recrate figures test 2.ipynb
-                    |- Recreate figures test.ipynb
-                |- Dataset cleaning
-                    |- Data Augmentation
-                        |- Augmenting Data.ipynb
-                        |- CdSe scaled.csv
-                        |- Optimization ML Models for Data Augmentation.ipynb
-                        |- abs_filler.csv
-                        |- augmented absorbance.csv
-                        |- augmented_data.csv
-                        |- pl_filler.csv
-                        |- random_forest_ab.joblib
-                        |- random_forest_pl.joblib
-                    |- Column Transformer.ipynb
-                |- Machine Learning Models
-                    |- Decision Tree.ipynb
-                    |- Extra Trees.ipynb
-                    |- Gradient Boosting Machine.ipynb
-                    |- KNN.ipynb
-                    |- Multi-Output Models.ipynb
-                    |- Multilinear Regression.ipynb
-                    |- Random Forest.ipynb
-                    |- Ridge Regression.ipynb
-                    |- SVR (kernel='linear','rbf).ipynb
-        |-Streamlit-User Interface
-            |- CdSe - BetterthanRaw.csv
-            |- ET_reg.joblib
-            |- main.py
-        |-documentation.txt
-    |- LICENSE.txt
-    |- README.md
-    |- .gitignore
+                |- ET_reg.joblib
+                |- main.py
+            |-documentation.txt
+        |- LICENSE.txt
+        |- README.md
+        |- .gitignore
     
 ## Getting started with the hotdots package 
 
