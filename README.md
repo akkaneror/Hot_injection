@@ -13,7 +13,7 @@ The purpose of this project is two-fold:
 
 ## Organization 
 
-`Hot_injection
+Hot_injection
     |- doc
         |- component_specification.txt
         |- Initial Project Idea.pdf
@@ -64,8 +64,7 @@ The purpose of this project is two-fold:
         |-documentation.txt
     |- LICENSE.txt
     |- README.md
-    |- .gitignore   
-`
+    |- .gitignore   `
     
 ## Getting started with the hotdots package 
 
@@ -91,6 +90,7 @@ Mac OS: Terminal
 #### Package dependencies
 
 * bokeh
+* joblib
 * numpy
 * pandas
 * sklearn
