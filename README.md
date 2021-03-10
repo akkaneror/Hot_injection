@@ -128,7 +128,7 @@ This project follows the PEP8 style using the **[pylint](https://www.pylint.org/
 
 ## Authors
 
-* **Benedicte Diakubama - MS, Chemical Engineering
-* **Florence Dou - PhD, Chemistry
-* **Hao Anh Nguyen - PhD, Chemistry
-* **Harrison Sarsito - MS, Chemical Engineering
+* **Benedicte Diakubama** - MS, Chemical Engineering
+* **Florence Dou** - PhD, Chemistry
+* **Hao Anh Nguyen** - PhD, Chemistry
+* **Harrison Sarsito** - MS, Chemical Engineering
