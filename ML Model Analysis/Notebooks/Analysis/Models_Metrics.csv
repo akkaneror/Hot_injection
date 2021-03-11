@@ -1,17 +1,17 @@
 Models,Types,R2_d,R2_ab,R2_pl,MSE_d,MSE_ab,MSE_pl,MAE_d,RMSE_d,author
-Multilinear Regression,Single Output,0.17,0.43,0.21,2.01,2439.1,1044.73,0.86,1.417744688,Harrison
-Ridge,Single Output,0.32,0.6,0.26,1.23,2060.45,1288.8,0.706826839,1.109053651,Florence
-Gradient Boosting,Single Output,0.7,0.9,0.73,0.54,513.1,480.37,0.353314167,0.734846923,Florence
-K Neighbors,Single Output,0.61,0.75,0.38,0.7,1261.51,1091.43,0.471238983,0.836660027,Florence
-SVR(kernel='linear'),Single Output,0.26,0.43,0.1,1.35,2918.78,1576.63,0.70087354,1.161895004,Florence
-SVR(kernel='rbf'),Single Output,0.3,-0.04,0.06,1.27,5311.58,1638.89,0.712904237,1.126942767,Florence
-Decision Tree,Single Output,0.62,0.86,0.52,0.69,738,839,0.468466102,0.830662386,Benedicte
-Random Forest,Single Output,0.65,0.83,0.67,0.64,864,569,0.431191186,0.8,Benedicte
-Extra Trees,Multi Output,0.81,0.94,0.78,0.5,363.21,467.1,0.368241844,0.707106781,Hao
-Lasso,Multi Output,0.25,0.57,0.45,1.97,2564.61,1181.82,0.922104541,1.403566885,Hao
-Decision Tree,Multi Output,0.68,0.87,0.73,0.84,780.4,581.52,0.529671064,0.916515139,Hao
-Random Forest,Multi Output,0.75,0.89,0.81,0.65,651.7,396.97,0.415397021,0.806225775,Hao
-Ada Boost,Multi Output,0.66,0.76,0.69,0.89,1420.93,667.29,0.568606612,0.943398113,Hao
-Ridge,Multi Output,0.36,0.66,0.49,1.68,2039.36,1086.21,0.857679557,1.29614814,Hao
-Ridge CV,Multi Output,0.36,0.66,0.49,1.68,2033.8,1083.75,0.860209724,1.29614814,Hao
-K Neighbors,Multi Output,0.75,0.8,0.62,0.66,1196.99,816.85,0.491090426,0.81240384,Hao
+Multilinear Regression,Single Output,0.17,0.43,0.21,2.01,2439.10,1044.73,0.86,1.42,Harrison
+Ridge,Single Output,0.32,0.6,0.26,1.23,2060.45,1288.80,0.71,1.11,Florence
+Gradient Boosting,Single Output,0.7,0.9,0.73,0.54,513.10,480.37,0.35,0.73,Florence
+K Neighbors,Single Output,0.61,0.75,0.38,0.7,1261.51,1091.43,0.47,0.84,Florence
+SVR(kernel='linear'),Single Output,0.26,0.43,0.1,1.35,2918.78,1576.63,0.70,1.16,Florence
+SVR(kernel='rbf'),Single Output,0.3,-0.04,0.06,1.27,5311.58,1638.89,0.71,1.13,Florence
+Decision Tree,Single Output,0.62,0.86,0.52,0.69,738.00,839.00,0.47,0.83,Benedicte
+Random Forest,Single Output,0.65,0.83,0.67,0.64,864.00,569.00,0.43,0.80,Benedicte
+Extra Trees,Multi Output,0.81,0.94,0.78,0.5,363.21,467.10,0.37,0.71,Hao
+Lasso,Multi Output,0.25,0.57,0.45,1.97,2564.61,1181.82,0.92,1.40,Hao
+Decision Tree,Multi Output,0.68,0.87,0.73,0.84,780.40,581.52,0.53,0.92,Hao
+Random Forest,Multi Output,0.75,0.89,0.81,0.65,651.70,396.97,0.42,0.81,Hao
+Ada Boost,Multi Output,0.66,0.76,0.69,0.89,1420.93,667.29,0.57,0.94,Hao
+Ridge,Multi Output,0.36,0.66,0.49,1.68,2039.36,1086.21,0.86,1.30,Hao
+Ridge CV,Multi Output,0.36,0.66,0.49,1.68,2033.80,1083.75,0.86,1.30,Hao
+K Neighbors,Multi Output,0.75,0.8,0.62,0.66,1196.99,816.85,0.49,0.81,Hao
