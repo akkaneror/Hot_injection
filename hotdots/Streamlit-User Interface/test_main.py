@@ -73,7 +73,9 @@ user_df = pd.DataFrame(np.array(user_input).reshape(1, -1), columns=['Growth Tem
                                             'Solvent II', 'S_II_amount (g)', 'Time_min (min)'
                                             ])
 
-def test_answers():
+def test_answers1():
     assert (len(user_input)==len(RADIO_QUESTIONS_LIST)+len(SLIDER_QUESTIONS_LIST)), "User has missed a question!"
 
+def test_answer2():
+    assert all(i >= 0 for i in SLIDER_QUESTIONS_LIST) == True, "All numerical answers must be possitive"
 
