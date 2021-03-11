@@ -85,4 +85,7 @@ def test_answers3():
     assert all(ans in chain(*RADIO_SELECTIONS) for ans in radio_answers) == True, "At least one selection is wrong" 
 
 def test_answers4():
-    assert 
+    assert 0 < slider_answers[-1] < 360, "Overcooked!"
+
+def test_answers5()
+    assert 44 < slider_answers[0] < 360, "Temperature is too high or too low"
