@@ -55,7 +55,7 @@ SLIDER_SELECTIONS = [[0.1, 14.0, 0.15, 0.001],
 
 #Initiate lists for answers
 radio_answers = ['cadmium oxide', 'oleic acid', 'None', 'None', 'None', 'phenyl ether']
-slider_answers = [1, 1, 1, 1, 1, 1, 1, 1, 1]
+slider_answers = [50, 1, 1, 1, 1, 1, 1, 1, 50]
 
 
 #Rearange users' choice into a list to input to the ML model
