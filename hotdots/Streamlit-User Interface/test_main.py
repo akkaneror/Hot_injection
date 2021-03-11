@@ -2,6 +2,8 @@ import joblib
 import numpy as np
 import pandas as pd
 import streamlit as st
+
+from itertools import chain
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 
@@ -52,7 +54,7 @@ SLIDER_SELECTIONS = [[0.1, 14.0, 0.15, 0.0001],
                      [0.5, 1440.0, 50.0, 0.5],]
 
 #Initiate lists for answers
-radio_answers = [0, 0, 0, 0, 0, 0]
+radio_answers = ['cadmium oxide', 'oleic acid', 'None', 'None', 'None', 'phenyl ether']
 slider_answers = [0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 
@@ -76,6 +78,9 @@ user_df = pd.DataFrame(np.array(user_input).reshape(1, -1), columns=['Growth Tem
 def test_answers1():
     assert (len(user_input)==len(RADIO_QUESTIONS_LIST)+len(SLIDER_QUESTIONS_LIST)), "User has missed a question!"
 
-def test_answer2():
-    assert all(i >= 0 for i in SLIDER_QUESTIONS_LIST) == True, "All numerical answers must be possitive"
+def test_answers2():
+    assert all(i >= 0 for i in SLIDER_QUESTIONS_LIST) == True, "All numerical answers must be possitive!"
+
+def test_answers3():
+    assert all(ans in chain(*RADIO_SELECTIONS) for ans in radio_answers) == True, "At least one selection is wrong" 
 
