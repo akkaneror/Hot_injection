@@ -55,7 +55,7 @@ SLIDER_SELECTIONS = [[0.1, 14.0, 0.15, 0.001],
 
 #Initiate lists for answers
 radio_answers = ['cadmium oxide', 'oleic acid', 'None', 'None', 'None', 'phenyl ether']
-slider_answers = [1, 1, 1, 1, 1, 1, 1, 1, 1]
+slider_answers = [50, 1, 1, 1, 1, 1, 1, 1, 50]
 
 
 #Rearange users' choice into a list to input to the ML model
@@ -85,4 +85,7 @@ def test_answers3():
     assert all(ans in chain(*RADIO_SELECTIONS) for ans in radio_answers) == True, "At least one selection is wrong" 
 
 def test_answers4():
-    assert 
+    assert 0 < slider_answers[-1] < 360, "Overcooked!"
+
+def test_answers5()
+    assert 44 < slider_answers[0] < 360, "Temperature is too high or too low"
