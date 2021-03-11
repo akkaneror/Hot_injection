@@ -43,19 +43,19 @@ SLIDER_QUESTIONS_LIST = ['How much Cadmium do you plan to use? (mmol)',
                          'How long do you plan to grow the quantum dots (second)?'
                          ]
 #Creating sliders for each question above
-SLIDER_SELECTIONS = [[0.1, 14.0, 0.15, 0.0001],
+SLIDER_SELECTIONS = [[0.1, 14.0, 0.15, 0.001],
                      [0.001, 1.0, 0.01, 0.0001],
                      [0.0, 60.0, 10.0, 0.001],
                      [0.0, 40.0, 1.0, 0.001],
                      [0.0, 60.0, 1.0, 0.001],
-                     [0.0, 60.0, 10.0, 0.01],
-                     [0.0, 60.0, 10.0, 0.01],
+                     [0.0, 60.0, 10.0, 0.1],
+                     [0.0, 60.0, 10.0, 0.1],
                      [45.0, 350.0, 200.0, 1.0],
-                     [0.5, 1440.0, 50.0, 0.5],]
+                     [0.5, 360.0, 50.0, 0.5],]
 
 #Initiate lists for answers
 radio_answers = ['cadmium oxide', 'oleic acid', 'None', 'None', 'None', 'phenyl ether']
-slider_answers = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+slider_answers = [1, 1, 1, 1, 1, 1, 1, 1, 1]
 
 
 #Rearange users' choice into a list to input to the ML model
@@ -84,3 +84,5 @@ def test_answers2():
 def test_answers3():
     assert all(ans in chain(*RADIO_SELECTIONS) for ans in radio_answers) == True, "At least one selection is wrong" 
 
+def test_answers4():
+    assert 
