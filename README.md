@@ -105,12 +105,12 @@ Mac OS: Terminal
 2. Enter the command `git clone https://github.com/UW-DIRECT-2021-NANO/Hot_injection.git`
 3. Once inside the local, cloned repository, enter the command `cd hotdots/Streamlit-User\ Interface/`
 4. Enter the command `streamlit run main.py`
-5. Copy the URL into your browser
+5. Copy the URL into your browser and make some quantum dots!
 
 
 #### User Interface Module Code
 
-The user interface code is in a file called `main.py` inside the `Streamlit-User Interface`. The test file for this file is called `test_modules.py`. 
+The user interface code is in a file called `main.py` inside the `Streamlit-User Interface`. The test file for this file is called `test_main.py`. 
 
 
 ### Usecase 2: ML Model Analysis
