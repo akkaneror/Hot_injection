@@ -104,7 +104,8 @@ Mac OS: Terminal
 1. Enter into your desired directory from your terminal
 2. Enter the command `git clone https://github.com/UW-DIRECT-2021-NANO/Hot_injection.git`
 3. Once inside the local, cloned repository, enter the command `cd hotdots/Streamlit-User\ Interface/`
-4. Enter the command `Streamlit run main.py`
+4. Enter the command `streamlit run main.py`
+5. Copy the URL into your browser
 
 
 #### User Interface Module Code
