@@ -75,15 +75,18 @@ user_df = pd.DataFrame(np.array(user_input).reshape(1, -1), columns=['Growth Tem
 
 def test_answers1():
     """number of answers must equal number of questions"""
-    assert len(user_input)==len(RADIO_QUESTIONS_LIST)+len(SLIDER_QUESTIONS_LIST), "User has missed a question!"
+    assert len(user_input)==len(RADIO_QUESTIONS_LIST)+len(SLIDER_QUESTIONS_LIST), (
+    "User has missed a question!")
 
 def test_answers2():
     """all values must be positive"""
-    assert all(i >= 0 for i in slider_answers) is True, "All numerical answers must be positive!"
+    assert all(i >= 0 for i in slider_answers) is True, (
+    "All numerical answers must be positive!")
 
 def test_answers3():
     """all selected answers must come from given options"""
-    assert all(ans in chain(*RADIO_SELECTIONS) for ans in radio_answers) is True, "At least one selection is wrong"
+    assert all(ans in chain(*RADIO_SELECTIONS) for ans in radio_answers) is True, (
+    "At least one selection is wrong")
 
 def test_answers4():
     """Time must be less than 350 seconds"""
@@ -92,3 +95,8 @@ def test_answers4():
 def test_answers5():
     """temp must be between 44 and 360C"""
     assert 44<slider_answers[8]<360, "Temperature is too high or too low"
+
+def test_answers6():
+    """user must use cadmium and selenium to make CdSe quantum dots"""
+    assert slider_answers[0]>0 and slider_answers[1]>0, (
+    "User needs cadmium and selenium to make CdSe!")
