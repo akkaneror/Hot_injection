@@ -42,7 +42,7 @@ SLIDER_QUESTIONS_LIST = ['How much Cadmium do you plan to use? (mmol)',
                          'How much first solvent do you plan to use? (g)',
                          'How much second solvent do you plan to use? (g)',
                          'What is the growth temperature? (Degree Celsius)',
-                         'How long do you plan to grow the quantum dots (second)?'
+                         'How long do you plan to grow the quantum dots (minute)?'
                          ]
 #Creating sliders for each question above
 SLIDER_SELECTIONS = [[0.1, 14.0, 0.15, 0.001],
@@ -102,7 +102,7 @@ user_df = pd.DataFrame(np.array(user_input).reshape(1, -1), columns=['Growth Tem
                                             'CA_mmol (mmol)', 'Amines', 'Amines_mmol (mmol)',
                                             'Phosphines', 'Phosphines_mmol (mmol)',
                                             'Solvent I', 'S_I_amount (g)',
-                                            'Solvent II', 'S_II_amount (g)', 'Time_sec (sec)'
+                                            'Solvent II', 'S_II_amount (g)', 'Time_min (min)'
                                             ])
 #Print user inputs
 st.write(user_df)
