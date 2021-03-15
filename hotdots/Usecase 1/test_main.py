@@ -1,11 +1,9 @@
-import joblib
-import numpy as np
-import pandas as pd
-import streamlit as st
+"""Nose tests for user interface main.py module"""
 
 from itertools import chain
-from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import StandardScaler, OneHotEncoder
+
+import numpy as np
+import pandas as pd
 
 #Creating questions with multiple choice answer
 RADIO_QUESTIONS_LIST = ['What is your cadmium source?',
@@ -72,20 +70,25 @@ user_df = pd.DataFrame(np.array(user_input).reshape(1, -1), columns=['Growth Tem
                                             'CA_mmol (mmol)', 'Amines', 'Amines_mmol (mmol)',
                                             'Phosphines', 'Phosphines_mmol (mmol)',
                                             'Solvent I', 'S_I_amount (g)',
-                                            'Solvent II', 'S_II_amount (g)', 'Time_min (min)'
+                                            'Solvent II', 'S_II_amount (g)', 'Time_sec (sec)'
                                             ])
 
 def test_answers1():
-    assert (len(user_input)==len(RADIO_QUESTIONS_LIST)+len(SLIDER_QUESTIONS_LIST)), "User has missed a question!"
+    """number of answers must equal number of questions"""
+    assert len(user_input)==len(RADIO_QUESTIONS_LIST)+len(SLIDER_QUESTIONS_LIST), "User has missed a question!"
 
 def test_answers2():
-    assert all(i >= 0 for i in SLIDER_QUESTIONS_LIST) == True, "All numerical answers must be possitive!"
+    """all values must be positive"""
+    assert all(i >= 0 for i in slider_answers) is True, "All numerical answers must be positive!"
 
 def test_answers3():
-    assert all(ans in chain(*RADIO_SELECTIONS) for ans in radio_answers) == True, "At least one selection is wrong" 
+    """all selected answers must come from given options"""
+    assert all(ans in chain(*RADIO_SELECTIONS) for ans in radio_answers) is True, "At least one selection is wrong"
 
 def test_answers4():
-    assert 0 < slider_answers[-1] < 360, "Overcooked!"
+    """Time must be less than 350 seconds"""
+    assert 0<slider_answers[7]<350, "Overcooked!"
 
-def test_answers5()
-    assert 44 < slider_answers[0] < 360, "Temperature is too high or too low"
+def test_answers5():
+    """temp must be between 44 and 360C"""
+    assert 44<slider_answers[8]<360, "Temperature is too high or too low"

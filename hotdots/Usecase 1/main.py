@@ -102,7 +102,7 @@ user_df = pd.DataFrame(np.array(user_input).reshape(1, -1), columns=['Growth Tem
                                             'CA_mmol (mmol)', 'Amines', 'Amines_mmol (mmol)',
                                             'Phosphines', 'Phosphines_mmol (mmol)',
                                             'Solvent I', 'S_I_amount (g)',
-                                            'Solvent II', 'S_II_amount (g)', 'Time_min (min)'
+                                            'Solvent II', 'S_II_amount (g)', 'Time_sec (sec)'
                                             ])
 #Print user inputs
 st.write(user_df)
@@ -140,8 +140,8 @@ ct.fit_transform(df_input)
 X = ct.transform(user_df)
 
 #Load and use ExtraTrees ML model to predict outcomes
-loaded_ET_reg = joblib.load('ET_reg.joblib')
-predicted = loaded_ET_reg.predict(X)
+load_Extra_Trees = joblib.load('Extra_Trees.joblib')
+predicted = load_Extra_Trees.predict(X)
 st.write('Predicted diameter is', predicted[0, 0], '. \n',
          ' Predicted absorbance max is', predicted[0, 1], '. \n',
          ' Predicted emission is', predicted[0, 2], '.')
