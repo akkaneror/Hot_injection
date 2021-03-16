@@ -18,15 +18,9 @@ The purpose of this project is two-fold:
             |- component_specification.txt
             |- Initial Project Idea.pdf
             |- Technology Review.pdf
-            |- User Cases and Comp Spec Illustration.pdf
+            |- Use Cases and Comp Spec Illustration.pdf
         |- hotdots
-            |- Usecase 1
-                |- CdSe - BetterthanRaw.csv
-                |- ET_reg.joblib
-                |- documentation.txt
-                |- main.py
-                |- test_main.py
-            |- Usecase 2
+            |- ML models
                 |- Datasets
                     |- CdSe - Raw.csv
                     |- CdSe for Abs (S&E).csv
@@ -37,15 +31,15 @@ The purpose of this project is two-fold:
                     |- augmented_data.csv
                     |- documentation.txt
                 |- Notebooks
-                    |- Analysis
+                    |- Comparison Santos et al
                         |- Analysis_Summary.ipynb
                         |- Models_Metrics.csv
                         |- Recreate figures test 2.ipynb
+                        |- Recreate figures test.ipynb
                     |- Dataset Cleaning
                        |- Data Augmentation
                            |- Augmenting Data.ipynb
-                           |- CdSe scaled.csv
-                           |- Optimization ML Models for Data
+                           |- Optimization ML Models for Data Augmentation.ipynb
                            |- abs_filler.csv
                            |- augmented absorbance.csv
                            |- augmented_data.csv
@@ -53,7 +47,7 @@ The purpose of this project is two-fold:
                            |- random_forest_ab.joblib
                            |- random_forest_pl.joblib
                        |- Standardization and One-Hot Encoding.ipynb
-                    |- Machine Learning Models
+                    |- ML algorithms
                        |- Single-Output Models
                            |- Decision Tree.ipynb
                            |- Extra Trees.ipynb
@@ -63,7 +57,7 @@ The purpose of this project is two-fold:
                            |- Random Forest.ipynb
                            |- Ridge Regression.ipynb
                            |- SVR (kernel='linear','rbf).ipynb
-                       |- Multi-Output Models
+                       |- Multi-Output Models.ipynb
         |- .gitignore
         |- .travis.yml
         |- LICENSE.txt
