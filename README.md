@@ -77,7 +77,7 @@ There are 2 primary submodules inside the hotdots package: ML Models and Streaml
 
 `Streamlit UI` contains the components for the predictive package, which allows a user to enter certain experimental parameters for the hot injection synthesis of CdSe quantum dots after which package will use the extra trees algorithm to predict the synthesized CdSe dots' diameter, absorbance and emission. 
 
-`ML Models` contains the analysis that our team conducted on the various ML models' predictive capabilities in predicting the diameter, absorbance and emission. In total, 16 models were tested. It also includes our comparative analysis with the **[paper](https://pubs.acs.org/doi/10.1021/acs.jpcc.0c05993)**, from which we obtained our initial dataset. 
+`ML Models` contains the analysis that our team conducted on the various ML models' predictive capabilities in predicting the diameter, absorbance and emission. In total, 12 models were tested. It also includes our comparative analysis with the **[paper](https://pubs.acs.org/doi/10.1021/acs.jpcc.0c05993)**, from which we obtained our initial dataset. 
 
 
 ### Streamlit UI
