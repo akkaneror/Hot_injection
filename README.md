@@ -6,7 +6,7 @@ The purpose of this project is two-fold:
    
    1. Predict the size (nm), max absorbance (nm) and max photoluminescence emission (nm) outcomes of a hot injection synthesis of CdSe Quantum Dots based on a particular set of experimental conditions. 
    
-   2. Compare and contrast the diameter prediction models explored in this project with those discussed in the paper **[Machine Learning Tools to Predict Hot Injection Syntheses Outcomes for II-VI and IV-VI Quantum Dots] (https://pubs.acs.org/doi/10.1021/acs.jpcc.0c05993)**. 
+   2. Explore different ML models to identify which algorithm yields the most accurate prediction of the desired 3 aforementioned outputs. Moreover, do a compare and contrast analysis for diameter prediction models explored in this project with those discussed in the paper **[Machine Learning Tools to Predict Hot Injection Syntheses Outcomes for II-VI and IV-VI Quantum Dots] (https://pubs.acs.org/doi/10.1021/acs.jpcc.0c05993)**. 
     
  
     
@@ -58,6 +58,11 @@ The purpose of this project is two-fold:
                            |- Ridge Regression.ipynb
                            |- SVR (kernel='linear','rbf).ipynb
                        |- Multi-Output Models.ipynb
+            |- Streamlit UI
+                |- CdSe - BetterthanRaw.csv
+                |- Extra_Trees.joblib
+                |- main.py
+                |- test_main.py
         |- .gitignore
         |- .travis.yml
         |- LICENSE.txt
@@ -68,21 +73,21 @@ The purpose of this project is two-fold:
             
 ## Getting started with the hotdots package 
 
-There are 2 primary submodules inside this hotdots package: Usecase 1 and Usecase 2. 
+There are 2 primary submodules inside the hotdots package: ML Models and Streamlit UI. 
 
-Usecase 1 contains the components for the predictive package, which allows a user to enter certain experimental parameters for the hot injection synthesis of CdSe quantum dots after which package will use the extra trees algorithm to predict the synthesized CdSe dots' diameter, absorbance and emission. 
+`Streamlit UI` contains the components for the predictive package, which allows a user to enter certain experimental parameters for the hot injection synthesis of CdSe quantum dots after which package will use the extra trees algorithm to predict the synthesized CdSe dots' diameter, absorbance and emission. 
 
-Usecase 2 contains the analysis that our team conducted on the various ML models' predictive capabilities in predicting the diameter, absorbance and emission. It also includes our comparative analysis with the **[paper](https://pubs.acs.org/doi/10.1021/acs.jpcc.0c05993)**, from which we obtained our initial dataset. 
+`ML Models` contains the analysis that our team conducted on the various ML models' predictive capabilities in predicting the diameter, absorbance and emission. In total, 16 models were tested. It also includes our comparative analysis with the **[paper](https://pubs.acs.org/doi/10.1021/acs.jpcc.0c05993)**, from which we obtained our initial dataset. 
 
 
-### Usecase 1: Streamlit - User Interface
+### Streamlit UI
 
 This interface enables the user input certain experimental conditions after which the package will predict the resultant CdSe diameter (nm), absorbance (nm) and PL emission (nm) wavelength. The package utilizes extra trees model to create 
 
 #### Prerequisites
 Windows Users: Windows preview, **[Ubuntu](https://towardsdatascience.com/setting-up-a-data-science-environment-using-windows-subsystem-for-linux-wsl-c4b390803dd)**
 
-Mac OS: Terminal
+Mac Users: Terminal
 
 #### Package dependencies
 
@@ -107,11 +112,11 @@ Mac OS: Terminal
 The user interface code is in a file called `main.py` inside the `Streamlit-User Interface`. The test file for this file is called `test_main.py`. 
 
 
-### Usecase 2: ML Model Analysis
+### ML Models
 
-The `Datasets` submodule contain the datasets that were used to train the various ML models explored. The original **[dataset](https://pubs.acs.org/doi/suppl/10.1021/acs.jpcc.0c05993/suppl_file/jp0c05993_si_004.txt)**  was part of the supplementary information of **[Machine Learning Tools to Predict Hot Injection Syntheses Outcomes for II-VI and IV-VI Quantum Dots] (https://pubs.acs.org/doi/10.1021/acs.jpcc.0c05993)**. All of the input data were standardized (numerical inputs) and one-hot encoded (categorical inputs). Data augmentation was used to impute the "None" values of some of the absorbance and emission entries. The resultant dataset after these transformations is labelled as `augmented_data.csv` in the `Datasets` submodule. 
+The `Datasets` submodule contain the datasets that were used to train the various ML models explored. The original **[dataset](https://pubs.acs.org/doi/suppl/10.1021/acs.jpcc.0c05993/suppl_file/jp0c05993_si_004.txt)**  was part of the supplementary information of **[Machine Learning Tools to Predict Hot Injection Syntheses Outcomes for II-VI and IV-VI Quantum Dots] (https://pubs.acs.org/doi/10.1021/acs.jpcc.0c05993)**. All of the input data were standardized (numerical inputs) and one-hot encoded (categorical inputs). Data augmentation was used to impute the "None" values of some of the absorbance and emission entries. The resultant dataset after these transformations is labelled as `augmented_data.csv` in this submodule. 
 
-The `Notebooks` submodule contains all of the analytic components. A summary of predictive accuracies of each of the ML models explored could be found in the `Analysis` submodule. The dataset standardization, one-hot encoding and augmentation is documented in the `Dataset cleaning` submodule. The `Machine Learning Models` submodules include all of the different ML models that were explored in this project, which includes both single-output and multi-output ML models.
+The `Notebooks` submodule contains all of the analytic components. `Comparison Santos et al` encapsulates our comparative analysis with the aforementioned **[paper] (https://pubs.acs.org/doi/10.1021/acs.jpcc.0c05993)**. The `Analysis_Summary.ipynb` in that submodule outlines all of the 16 models that were investigated in this project, along with a figure comparison with the paper. The `Dataset cleaning` submodule includes the dataset standardization, one-hot encoding and augmentation process applied to the initial dataset. The `Machine Learning Models` submodules include individual notebooks for all of the different single-output and multi-output ML models explored in this project.
 
 
 
@@ -125,10 +130,6 @@ Tests can be run using the **[nosetests](https://nose.readthedocs.io/en/latest/)
 ### Style Tests
 
 This project follows the PEP8 style using the **[pylint](https://www.pylint.org/)** code checker.  
-
-
-## Built With
-
 
 
 ## Authors
