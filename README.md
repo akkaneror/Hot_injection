@@ -120,11 +120,11 @@ The `Notebooks` submodule contains all of the analytic components. `Comparison S
 
 
 
-## Running the Tests
+### Running the Tests
 
 Tests can be run using the **[nosetests](https://nose.readthedocs.io/en/latest/)** package. 
 
-`nosetests Hot_injection/hotdots/Streamlit-user| Interface/ tests_modules.py`
+`nosetests Hot_injection/hotdots/Streamlit UI/ test_main.py`
 
 
 ### Style Tests
