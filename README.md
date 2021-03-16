@@ -34,8 +34,6 @@ The purpose of this project is two-fold:
                     |- Comparison Santos et al
                         |- Analysis_Summary.ipynb
                         |- Models_Metrics.csv
-                        |- Recreate figures test 2.ipynb
-                        |- Recreate figures test.ipynb
                     |- Dataset Cleaning
                        |- Data Augmentation
                            |- Augmenting Data.ipynb
