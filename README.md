@@ -6,7 +6,7 @@ The purpose of this project is two-fold:
    
    1. Predict the size (nm), max absorbance (nm) and max photoluminescence emission (nm) outcomes of a hot injection synthesis of CdSe Quantum Dots based on a particular set of experimental conditions. 
    
-   2. Explore different ML models to identify which algorithm yields the most accurate prediction of the desired 3 aforementioned outputs. Moreover, do a compare and contrast analysis for diameter prediction models explored in this project with those discussed in the paper **[Machine Learning Tools to Predict Hot Injection Syntheses Outcomes for II-VI and IV-VI Quantum Dots] (https://pubs.acs.org/doi/10.1021/acs.jpcc.0c05993)**. 
+   2. Explore different ML models to identify which algorithm yields the most accurate prediction of the desired 3 aforementioned outputs. Moreover, do a compare and contrast analysis for diameter prediction models explored in this project with those discussed in the paper **[Machine Learning Tools to Predict Hot Injection Syntheses Outcomes for II-VI and IV-VI Quantum Dots](https://pubs.acs.org/doi/10.1021/acs.jpcc.0c05993)**. 
     
  
     
@@ -114,9 +114,9 @@ The user interface code is in a file called `main.py` inside the `Streamlit-User
 
 ### ML Models
 
-The `Datasets` submodule contain the datasets that were used to train the various ML models explored. The original **[dataset](https://pubs.acs.org/doi/suppl/10.1021/acs.jpcc.0c05993/suppl_file/jp0c05993_si_004.txt)**  was part of the supplementary information of **[Machine Learning Tools to Predict Hot Injection Syntheses Outcomes for II-VI and IV-VI Quantum Dots] (https://pubs.acs.org/doi/10.1021/acs.jpcc.0c05993)**. All of the input data were standardized (numerical inputs) and one-hot encoded (categorical inputs). Data augmentation was used to impute the "None" values of some of the absorbance and emission entries. The resultant dataset after these transformations is labelled as `augmented_data.csv` in this submodule. 
+The `Datasets` submodule contain the datasets that were used to train the various ML models explored. The original **[dataset](https://pubs.acs.org/doi/suppl/10.1021/acs.jpcc.0c05993/suppl_file/jp0c05993_si_004.txt)**  was part of the supplementary information of **[Machine Learning Tools to Predict Hot Injection Syntheses Outcomes for II-VI and IV-VI Quantum Dots](https://pubs.acs.org/doi/10.1021/acs.jpcc.0c05993)**. All of the input data were standardized (numerical inputs) and one-hot encoded (categorical inputs). Data augmentation was used to impute the "None" values of some of the absorbance and emission entries. The resultant dataset after these transformations is labelled as `augmented_data.csv` in this submodule. 
 
-The `Notebooks` submodule contains all of the analytic components. `Comparison Santos et al` encapsulates our comparative analysis with the aforementioned **[paper] (https://pubs.acs.org/doi/10.1021/acs.jpcc.0c05993)**. The `Analysis_Summary.ipynb` in that submodule outlines all of the 16 models that were investigated in this project, along with a figure comparison with the paper. The `Dataset cleaning` submodule includes the dataset standardization, one-hot encoding and augmentation process applied to the initial dataset. The `Machine Learning Models` submodules include individual notebooks for all of the different single-output and multi-output ML models explored in this project.
+The `Notebooks` submodule contains all of the analytic components. `Comparison Santos et al` encapsulates our comparative analysis with the aforementioned **[paper](https://pubs.acs.org/doi/10.1021/acs.jpcc.0c05993)**. The `Analysis_Summary.ipynb` in that submodule outlines all of the 16 models that were investigated in this project, along with a figure comparison with the paper. The `Dataset cleaning` submodule includes the dataset standardization, one-hot encoding and augmentation process applied to the initial dataset. The `Machine Learning Models` submodules include individual notebooks for all of the different single-output and multi-output ML models explored in this project.
 
 
 
