@@ -1,13 +1,9 @@
-"""
-This is where the user interface is made using the streamlit package.
-"""
+"""Nose tests for user interface main.py module"""
 
-import joblib
+from itertools import chain
+
 import numpy as np
 import pandas as pd
-import streamlit as st
-from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import StandardScaler, OneHotEncoder
 
 #Creating questions with multiple choice answer
 RADIO_QUESTIONS_LIST = ['What is your cadmium source?',
@@ -42,7 +38,7 @@ SLIDER_QUESTIONS_LIST = ['How much Cadmium do you plan to use? (mmol)',
                          'How much first solvent do you plan to use? (g)',
                          'How much second solvent do you plan to use? (g)',
                          'What is the growth temperature? (Degree Celsius)',
-                         'How long do you plan to grow the quantum dots (second)?'
+                         'How long do you plan to grow the quantum dots (min)?'
                          ]
 #Creating sliders for each question above
 SLIDER_SELECTIONS = [[0.1, 14.0, 0.15, 0.001],
@@ -56,37 +52,9 @@ SLIDER_SELECTIONS = [[0.1, 14.0, 0.15, 0.001],
                      [0.5, 360.0, 50.0, 0.5],]
 
 #Initiate lists for answers
-radio_answers = []
-slider_answers = []
+radio_answers = ['cadmium oxide', 'oleic acid', 'None', 'None', 'None', 'phenyl ether']
+slider_answers = [50, 1, 1, 1, 1, 1, 1, 1, 50]
 
-
-def get_radio_input(question, selection):
-    """
-    This function creates questions and
-    multiple choice answers in the user interface.
-    """
-    answer = st.radio(question, selection)
-    return answer
-
-def get_slider_input(question, mmin_val, max_val, default_val, interval):
-    """
-    This function creates questions and
-    slider answers in the user interface.
-    """
-    answer = st.slider(question, mmin_val, max_val, default_val, interval)
-    return answer
-
-#List of answers for multiple choice questions
-for i in range(len(RADIO_QUESTIONS_LIST)):
-    radio_answers.append(get_radio_input(
-        RADIO_QUESTIONS_LIST[i], RADIO_SELECTIONS[i]))
-
-#List of answers for slider questions
-for i in range(len(SLIDER_QUESTIONS_LIST)):
-    slider_answers.append(get_slider_input(
-        SLIDER_QUESTIONS_LIST[i], SLIDER_SELECTIONS[i][0],
-        SLIDER_SELECTIONS[i][1], SLIDER_SELECTIONS[i][2],
-        SLIDER_SELECTIONS[i][3]))
 
 #Rearange users' choice into a list to input to the ML model
 user_input = [slider_answers[7], radio_answers[0], slider_answers[0], slider_answers[1],
@@ -104,44 +72,31 @@ user_df = pd.DataFrame(np.array(user_input).reshape(1, -1), columns=['Growth Tem
                                             'Solvent I', 'S_I_amount (g)',
                                             'Solvent II', 'S_II_amount (g)', 'Time_min (min)'
                                             ])
-#Print user inputs
-st.write(user_df)
 
-#Scaling and encoding user input using the raw dataset
-df = pd.read_csv('CdSe - BetterthanRaw.csv')
+def test_answers1():
+    """number of answers must equal number of questions"""
+    assert len(user_input)==len(RADIO_QUESTIONS_LIST)+len(SLIDER_QUESTIONS_LIST), (
+    "User has missed a question!")
 
-#Separate out initial DataFrame into the input features and output features
-df_input = df.drop(columns =['Injection Temp (Celsius)', 'Metal_amount (g)',
-'Metal_concentration (mmol/g)', 'Chalcogen_amount (g)', 'Chalcogen_concentration (mmol/g)',
-'Metal/Se_ratio', 'CA_amount (g)', 'Cd/CA_ratio', 'Amines_amount (g)', 'Phosphines_amount (g)',
-'Chalcogen/Ph_ratio','Total_amount (g)','Chalcogen_source','Diameter_nm', 'Absorbance max (nm)',
-'PL max (nm)', 'Diameter from', 'Citation'],
-inplace = False, axis = 1)
+def test_answers2():
+    """all values must be positive"""
+    assert all(i >= 0 for i in slider_answers) is True, (
+    "All numerical answers must be positive!")
 
-#Checks the column names, and ensures that they do not have any leading or trailing spaces
-df_input.columns = df_input.columns.str.strip()
+def test_answers3():
+    """all selected answers must come from given options"""
+    assert all(ans in chain(*RADIO_SELECTIONS) for ans in radio_answers) is True, (
+    "At least one selection is wrong")
 
-#Converts the values in Growth Temperature Column into float types
-df_input['Growth Temp (Celsius)'] = df_input['Growth Temp (Celsius)'].astype(float)
+def test_answers4():
+    """Time must be less than 350 seconds"""
+    assert 0<slider_answers[7]<350, "Overcooked!"
 
-#Initializes 2 lists to contain all of the numerical and categorical input columns
-input_num_cols = [col for col in df_input.columns if df[col].dtypes !='O']
-input_cat_cols = [col for col in df_input.columns if df[col].dtypes =='O']
+def test_answers5():
+    """temp must be between 44 and 360C"""
+    assert 44<slider_answers[8]<360, "Temperature is too high or too low"
 
-ct = ColumnTransformer([
-    ('step1', StandardScaler(), input_num_cols),
-    ('step2', OneHotEncoder(sparse=False, handle_unknown='ignore'), input_cat_cols)
-], remainder = 'passthrough')
-
-
-ct.fit_transform(df_input)
-
-#Use same column transformer on user input
-X = ct.transform(user_df)
-
-#Load and use ExtraTrees ML model to predict outcomes
-loaded_ET_reg = joblib.load('ET_reg.joblib')
-predicted = loaded_ET_reg.predict(X)
-st.write('Predicted diameter is', predicted[0, 0], '. \n',
-         ' Predicted absorbance max is', predicted[0, 1], '. \n',
-         ' Predicted emission is', predicted[0, 2], '.')
+def test_answers6():
+    """user must use cadmium and selenium to make CdSe quantum dots"""
+    assert slider_answers[0]>0 and slider_answers[1]>0, (
+    "User needs cadmium and selenium to make CdSe!")
