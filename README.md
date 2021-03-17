@@ -15,6 +15,7 @@ The purpose of this project is two-fold:
 
     Hot_injection
         |- doc
+            |- comparison paper.pdf
             |- component_specification.txt
             |- Initial Project Idea.pdf
             |- Technology Review.pdf
