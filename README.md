@@ -6,7 +6,7 @@ The purpose of this project is two-fold:
    
    1. Predict the size (nm), max absorbance (nm) and max photoluminescence emission (nm) outcomes of a hot injection synthesis of CdSe Quantum Dots based on a particular set of experimental conditions. 
    
-   2. Explore different ML models to identify which algorithm yields the most accurate prediction of the desired 3 aforementioned outputs. Moreover, do a compare and contrast analysis for diameter prediction models explored in this project with those discussed in the paper **[Machine Learning Tools to Predict Hot Injection Syntheses Outcomes for II-VI and IV-VI Quantum Dots](https://pubs.acs.org/doi/10.1021/acs.jpcc.0c05993)**. 
+   2. Explore 12 different ML models to identify which algorithm yields the most accurate prediction of the desired 3 aforementioned outputs. Moreover, do a compare and contrast analysis for diameter prediction models explored in this project with those discussed in the paper **[Machine Learning Tools to Predict Hot Injection Syntheses Outcomes for II-VI and IV-VI Quantum Dots](https://pubs.acs.org/doi/10.1021/acs.jpcc.0c05993)**. 
     
  
     
