@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/UW-DIRECT-2021-NANO/Hot_injection.svg?branch=master)](https://travis-ci.com/UW-DIRECT-2021-NANO/Hot_injection)
+
 # Hot_Injection
 
 This is a class project for University of Washington CHEME 545/546 Winter 2021.
