@@ -1,4 +1,4 @@
-[Build Status](https://travis-ci.com/UW-DIRECT-2021-NANO/Hot_injection.svg?branch=master)
+[![Build Status](https://travis-ci.com/UW-DIRECT-2021-NANO/Hot_injection.svg?branch=master)
 
 
 # Hot_Injection
