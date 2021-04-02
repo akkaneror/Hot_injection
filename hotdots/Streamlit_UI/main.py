@@ -142,7 +142,6 @@ X = ct.transform(user_df)
 #Load and use ExtraTrees ML model to predict outcomes
 load_Extra_Trees = joblib.load('hotdots/Streamlit_UI/Extra_Trees.joblib')
 predicted = load_Extra_Trees.predict(X)
-st.write(f'Predicted diameter is {predicted[0, 0]:.3f}.\n',
-         f'Predicted absorbance max is {predicted[0, 1]:.2f} \n',
-         f'Predicted emission is {predicted[0, 2]:.2f}')
-
+st.write('Predicted diameter is', round(predicted[0, 0], 3), '. \n',
+         ' Predicted absorbance max is', round(predicted[0, 1], 3), '. \n',
+         ' Predicted emission is', round(predicted[0, 2], 3), '.')
