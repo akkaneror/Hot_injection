@@ -140,7 +140,7 @@ ct.fit_transform(df_input)
 X = ct.transform(user_df)
 
 #Load and use ExtraTrees ML model to predict outcomes
-load_Extra_Trees = joblib.load('Extra_Trees.joblib')
+load_Extra_Trees = joblib.load('hotdots/Streamlit_UI/Extra_Trees.joblib')
 predicted = load_Extra_Trees.predict(X)
 st.write('Predicted diameter is', predicted[0, 0], '. \n',
          ' Predicted absorbance max is', predicted[0, 1], '. \n',
